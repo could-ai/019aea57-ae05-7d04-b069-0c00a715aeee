@@ -108,11 +108,10 @@ class ProfileScreen extends StatelessWidget {
 
   IconData _getStatusIcon(BetStatus status) {
     switch (status) {
-      case BetStatus.open: return Colors.hourglass_empty == Colors.hourglass_empty ? Icons.hourglass_empty : Icons.hourglass_empty; // Fix for weird lint if any
+      case BetStatus.open: return Icons.hourglass_empty;
       case BetStatus.won: return Icons.check;
       case BetStatus.lost: return Icons.close;
     }
-    return Icons.hourglass_empty;
   }
 
   String _getSelectionText(BetSelection selection) {
